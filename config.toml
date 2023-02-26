@@ -1,0 +1,55 @@
+baseurl = "https://john-dekka.github.io/"
+languageCode = "de-de"
+theme = "terminal"
+paginate = 10
+ignoreErrors = ["error-remote-getjson"]
+defaultContentLanguage = 'de'
+
+[params]
+  contentTypeName = "posts"
+  themeColor = "jdt"
+  showMenuItems = 10
+  showLanguageSelector = false
+  fullWidthTheme = false
+  centerTheme = true
+  autoCover = false
+  readingTime = false
+  showLastUpdated = false
+  updatedDatePrefix = "Aktualisiert"
+
+[languages]
+  [languages.de]
+    languageName = "Deutsch"
+    title = "John Dekka Blog"
+    subtitle = "Ein Einblick in meine große kleine Welt"
+    owner = "John Dekka"
+    keywords = "blog, linux, gaming, games, hardware, news, artikel, neuigkeiten, projekte, marmelade"
+    copyright = "John Dekka Blog © 2023"
+    menuMore = "Mehr anzeigen"
+    readMore = "Weiterlesen"
+    readOtherPosts = "Andere Artikel lesen"
+    newerPosts = "Neuere Artikel"
+    olderPosts = "Ältere Artikel"
+    missingContentMessage = "Seit net gefunn..."
+    missingBackButtonLabel = "Zurück zur Startseite"
+    words = "Wörter"
+    minuteReadingTime = "Min. Lesezeit"
+
+    [languages.de.params.logo]
+      logoText = "John Dekka Blog"
+      logoHomeLink = "/"
+
+    [languages.de.menu]
+      [[languages.de.menu.main]]
+        identifier = "info"
+        name = "Info"
+        url = "/info"
+      [[languages.de.menu.main]]
+        identifier = "kontakt"
+        name = "Kontakt"
+        url = "/kontakt"
+      [[languages.de.menu.main]]
+        identifier = "rss"
+        name = "RSS"
+        url = "/posts/index.xml"
+

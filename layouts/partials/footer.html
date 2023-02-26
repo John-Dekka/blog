@@ -1,0 +1,23 @@
+<footer class="footer">
+  <div class="footer__inner">
+      <div class="copyright">
+        <span>{{ $.Site.Copyright | safeHTML }}</span>
+      </div>
+  </div>
+  <div class="footer__inner">
+      <div class="copyright">
+          <small>Dieser Blog verwendet keine Cookies.</small>
+          <small>Es werden keine Logs erstellt.</small>
+      </div>
+  </div>
+</footer>
+
+{{ $menu := resources.Get "js/menu.js" | js.Build }}
+{{ $prism := resources.Get "js/prism.js" | js.Build }}
+
+{{ $bundle := slice $menu $prism | resources.Concat "bundle.js" | resources.Minify }}
+
+<script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>
+
+<!-- Extended footer section-->
+{{ partial "extended_footer.html" . }}
